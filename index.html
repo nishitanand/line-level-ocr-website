@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Stop at Words? Unveiling the Bigger Picture through Line-Level OCR</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h3>Line-Level OCR</h3>
+            </div>
+            <div class="nav-links">
+                <a href="#abstract">Abstract</a>
+                <a href="#examples">Examples</a>
+                <a href="#results">Results</a>
+                <a href="#dataset">Dataset</a>
+                <a href="#bibtex">Citation</a>
+                <a href="#code" class="nav-cta">Code</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Why Stop at Words?<br>Unveiling the Bigger Picture through<br><span class="highlight">Line-Level OCR</span></h1>
+                
+                <div class="authors">
+                    <p>
+                        <a href="#" class="author">Shashank Vempati*</a>,
+                        <a href="#" class="author">Nishit Anand*</a>,
+                        <a href="#" class="author">Gaurav Talebailkar</a>,
+                        <a href="#" class="author">Arpan Garai</a>,
+                        <a href="#" class="author">Chetan Arora</a>
+                    </p>
+                    <p class="affiliation">Indian Institute of Technology Delhi, India</p>
+                    <p class="equal-contrib">*Joint first authors with equal contribution</p>
+                    <p class="correspondence">Correspondence: <a href="mailto:aiy227509@iitd.ac.in">aiy227509@iitd.ac.in</a>, <a href="mailto:nishit.cstaff@iitd.ac.in">nishit.cstaff@iitd.ac.in</a></p>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-file-pdf"></i> Paper
+                    </a>
+                    <a href="#" class="btn btn-secondary">
+                        <i class="fab fa-github"></i> Code
+                    </a>
+                    <a href="#dataset" class="btn btn-secondary">
+                        <i class="fas fa-database"></i> Dataset
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">5.4%</span>
+                        <span class="stat-label">Accuracy Improvement</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">4×</span>
+                        <span class="stat-label">Efficiency Improvement</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">251</span>
+                        <span class="stat-label">Annotated Page Dataset</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Abstract Section -->
+    <section id="abstract" class="section">
+        <div class="container">
+            <h2>Abstract</h2>
+            <div class="abstract-content">
+                <p>
+                    Traditional optical character recognition (OCR) systems have evolved from character-level segmentation to word-level approaches that utilize sequence-to-sequence models for improved language model integration. However, this progression has shifted the accuracy bottleneck to word detection, which remains error-prone and computationally intensive.
+                </p>
+                <p>
+                    This paper presents a novel line-level OCR paradigm that bypasses word detection entirely, enabling direct recognition of complete text lines. Our approach provides enhanced sentence-level context for language models while simultaneously improving both accuracy and computational efficiency. The method addresses fundamental limitations in existing word-based OCR pipelines by eliminating intermediate segmentation steps.
+                </p>
+                <p>
+                    We contribute a comprehensive dataset of 251 English document pages with line-level annotations to support this research direction. Experimental evaluation demonstrates a <strong>5.4% accuracy improvement</strong> and <strong>4× efficiency gain</strong> compared to state-of-the-art word-based methods, establishing the effectiveness of line-level processing for document image analysis.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pipeline Comparison -->
+    <section class="pipeline-section">
+        <div class="container">
+            <h2>Pipeline Comparison</h2>
+            
+            <!-- Pipeline Diagram -->
+            <div class="pipeline-diagram">
+                <img src="images/pipeline.png" alt="Pipeline Comparison Diagram" class="pipeline-image">
+                <p class="diagram-caption">Comparison between existing and proposed pipelines for OCR</p>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Key Contributions -->
+    <section class="contributions">
+        <div class="container">
+            <h2>Key Contributions</h2>
+            <div class="contributions-grid">
+                <div class="contribution-card">
+                    <div class="contribution-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Improved Accuracy</h3>
+                    <p>5.4% end-to-end accuracy improvement by eliminating word detection errors and leveraging larger sentence context</p>
+                </div>
+                
+                <div class="contribution-card">
+                    <div class="contribution-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>Enhanced Efficiency</h3>
+                    <p>4× efficiency improvement by removing the word detection step from the pipeline</p>
+                </div>
+                
+                <div class="contribution-card">
+                    <div class="contribution-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>New Dataset</h3>
+                    <p>Curated dataset of 251 English pages with line-level annotations for training and benchmarking</p>
+                </div>
+                
+                <div class="contribution-card">
+                    <div class="contribution-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Context Utilization</h3>
+                    <p>Better exploitation of language models with larger sentence-level context for recognition</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Examples Section -->
+    <section id="examples" class="examples-section">
+        <div class="container">
+            <h2>Qualitative Results</h2>
+            <p class="section-subtitle">Challenging examples demonstrating the superiority of line-level OCR over traditional word-based pipelines</p>
+            
+            <div class="examples-grid">
+                <div class="example-card">
+                    <div class="example-image">
+                        <img src="images/example1.jpg" alt="Example 1: Challenging text with errors">
+                    </div>
+                    <div class="example-content">
+                        <h4>Complex Text Recognition</h4>
+                        <div class="comparison-results">
+                            <div class="result-item">
+                                <span class="method-label">Ground Truth:</span>
+                                <span class="result-text">eliminating any need for a milling machine</span>
+                            </div>
+                            <div class="result-item error">
+                                <span class="method-label">CRAFT+ABINet:</span>
+                                <span class="result-text">eliminating any need.fora.miling.mahhiee</span>
+                            </div>
+                            <div class="result-item success">
+                                <span class="method-label">PARSeq<sub>line</sub> (Ours):</span>
+                                <span class="result-text">eliminating any need for a milling machine,</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-image">
+                        <img src="images/example2.jpg" alt="Example 2: Word spacing challenges">
+                    </div>
+                    <div class="example-content">
+                        <h4>Word Spacing Challenges</h4>
+                        <div class="comparison-results">
+                            <div class="result-item">
+                                <span class="method-label">Ground Truth:</span>
+                                <span class="result-text">we will watch over his children.</span>
+                            </div>
+                            <div class="result-item error">
+                                <span class="method-label">DBNet+PARSeq:</span>
+                                <span class="result-text">wewillwatch overhis children</span>
+                            </div>
+                            <div class="result-item success">
+                                <span class="method-label">PARSeq<sub>line</sub> (Ours):</span>
+                                <span class="result-text">we will watch over his children</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="section">
+        <div class="container">
+            <h2>Quantitative Results</h2>
+            
+            <div class="result-card">
+                <h3>System Comparison</h3>
+                <div class="result-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>OCR System</th>
+                                <th>CRR (Character Recognition Rate) (%)</th>
+                                <th>Flex Character Accuracy (%)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>PP-OCR</td>
+                                <td>78.96</td>
+                                <td>87.72</td>
+                            </tr>
+                            <tr>
+                                <td>Tesseract</td>
+                                <td><strong>88.16</strong></td>
+                                <td>88.41</td>
+                            </tr>
+                            <tr>
+                                <td>DocTR</td>
+                                <td>83.52</td>
+                                <td><u>97.14</u></td>
+                            </tr>
+                            <tr class="highlight-row">
+                                <td><strong>Ours(Kraken + PARSeq<sub>line</sub>)</strong></td>
+                                <td><u>85.76</u></td>
+                                <td><strong>97.62</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="results-section">
+            <div class="result-card">
+                <h3>Accuracy Comparison</h3>
+                <div class="result-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Word Detection</th>
+                                <th>Word Recognition</th>
+                                <th>CRR (Character Recognition Rate) (%)</th>
+                                <th>Flex Character Accuracy (%)</th>
+                                <th>Inference Time (s)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>DBNet</td>
+                                <td>PARSeq</td>
+                                <td>81.94</td>
+                                <td>89.66</td>
+                                <td>05.64</td>
+                            </tr>
+                            <tr>
+                                <td>DBNet</td>
+                                <td>ABINet</td>
+                                <td>80.72</td>
+                                <td>88.48</td>
+                                <td>05.91</td>
+                            </tr>
+                            <tr>
+                                <td>DBNet</td>
+                                <td>MATRN</td>
+                                <td>79.66</td>
+                                <td>85.63</td>
+                                <td>06.39</td>
+                            </tr>
+                            <tr>
+                                <td>DBNet</td>
+                                <td>CCD</td>
+                                <td>75.78</td>
+                                <td>83.41</td>
+                                <td>14.27</td>
+                            </tr>
+                            <tr>
+                                <td>DBNet</td>
+                                <td>MAERec</td>
+                                <td>81.26</td>
+                                <td>89.26</td>
+                                <td>16.20</td>
+                            </tr>
+                            <tr>
+                                <td>DBNet</td>
+                                <td>SIGA</td>
+                                <td>77.36</td>
+                                <td>86.13</td>
+                                <td>06.92</td>
+                            </tr>
+                            <tr>
+                                <td>DPText</td>
+                                <td>PARSeq</td>
+                                <td>83.02</td>
+                                <td>91.75</td>
+                                <td>07.08</td>
+                            </tr>
+                            <tr>
+                                <td>DPText</td>
+                                <td>ABINet</td>
+                                <td>82.43</td>
+                                <td>90.88</td>
+                                <td>07.35</td>
+                            </tr>
+                            <tr>
+                                <td>DPText</td>
+                                <td>MATRN</td>
+                                <td>81.04</td>
+                                <td>87.82</td>
+                                <td>07.83</td>
+                            </tr>
+                            <tr>
+                                <td>DPText</td>
+                                <td>CCD</td>
+                                <td>79.69</td>
+                                <td>88.23</td>
+                                <td>15.71</td>
+                            </tr>
+                            <tr>
+                                <td>DPText</td>
+                                <td>MAERec</td>
+                                <td>82.75</td>
+                                <td>91.48</td>
+                                <td>17.64</td>
+                            </tr>
+                            <tr>
+                                <td>DPText</td>
+                                <td>SIGA</td>
+                                <td>79.66</td>
+                                <td>88.76</td>
+                                <td>08.45</td>
+                            </tr>
+                            <tr>
+                                <td>TextFuseNet</td>
+                                <td>PARSeq</td>
+                                <td>80.48</td>
+                                <td>89.57</td>
+                                <td>29.29</td>
+                            </tr>
+                            <tr>
+                                <td>TextFuseNet</td>
+                                <td>ABINet</td>
+                                <td>80.02</td>
+                                <td>89.05</td>
+                                <td>29.57</td>
+                            </tr>
+                            <tr>
+                                <td>TextFuseNet</td>
+                                <td>MATRN</td>
+                                <td>78.80</td>
+                                <td>86.24</td>
+                                <td>30.05</td>
+                            </tr>
+                            <tr>
+                                <td>TextFuseNet</td>
+                                <td>CCD</td>
+                                <td>77.35</td>
+                                <td>85.90</td>
+                                <td>37.93</td>
+                            </tr>
+                            <tr>
+                                <td>TextFuseNet</td>
+                                <td>MAERec</td>
+                                <td>77.97</td>
+                                <td>87.18</td>
+                                <td>39.86</td>
+                            </tr>
+                            <tr>
+                                <td>TextFuseNet</td>
+                                <td>SIGA</td>
+                                <td>77.80</td>
+                                <td>86.74</td>
+                                <td>30.63</td>
+                            </tr>
+                            <tr>
+                                <td>CRAFT</td>
+                                <td>PARSeq</td>
+                                <td><u>83.46</u></td>
+                                <td><u>92.15</u></td>
+                                <td><u>02.11</u></td>
+                            </tr>
+                            <tr>
+                                <td>CRAFT</td>
+                                <td>ABINet</td>
+                                <td>82.68</td>
+                                <td>91.30</td>
+                                <td>02.39</td>
+                            </tr>
+                            <tr>
+                                <td>CRAFT</td>
+                                <td>MATRN</td>
+                                <td>81.03</td>
+                                <td>87.49</td>
+                                <td>02.88</td>
+                            </tr>
+                            <tr>
+                                <td>CRAFT</td>
+                                <td>CCD</td>
+                                <td>80.04</td>
+                                <td>88.59</td>
+                                <td>10.76</td>
+                            </tr>
+                            <tr>
+                                <td>CRAFT</td>
+                                <td>MAERec</td>
+                                <td>83.01</td>
+                                <td>91.83</td>
+                                <td>12.69</td>
+                            </tr>
+                            <tr>
+                                <td>CRAFT</td>
+                                <td>SIGA</td>
+                                <td>77.33</td>
+                                <td>86.22</td>
+                                <td>03.35</td>
+                            </tr>
+                            <tr>
+                                <td>MixNet</td>
+                                <td>PARSeq</td>
+                                <td>82.52</td>
+                                <td>91.25</td>
+                                <td>10.38</td>
+                            </tr>
+                            <tr>
+                                <td>MixNet</td>
+                                <td>ABINet</td>
+                                <td>81.86</td>
+                                <td>90.34</td>
+                                <td>10.65</td>
+                            </tr>
+                            <tr>
+                                <td>MixNet</td>
+                                <td>MATRN</td>
+                                <td>80.41</td>
+                                <td>87.08</td>
+                                <td>11.13</td>
+                            </tr>
+                            <tr>
+                                <td>MixNet</td>
+                                <td>CCD</td>
+                                <td>75.67</td>
+                                <td>83.10</td>
+                                <td>19.01</td>
+                            </tr>
+                            <tr>
+                                <td>MixNet</td>
+                                <td>MAERec</td>
+                                <td>82.19</td>
+                                <td>90.92</td>
+                                <td>20.94</td>
+                            </tr>
+                            <tr>
+                                <td>MixNet</td>
+                                <td>SIGA</td>
+                                <td>79.25</td>
+                                <td>88.39</td>
+                                <td>11.72</td>
+                            </tr>
+                            <tr class="highlight-row">
+                                <td><strong>-</strong></td>
+                                <td><strong>PARSeq<sub>line</sub> (Ours)</strong></td>
+                                <td><strong>85.76</strong></td>
+                                <td><strong>97.62</strong></td>
+                                <td><strong>00.53</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            </div>
+
+            <div class="efficiency-showcase">
+                <h3>Efficiency Improvements</h3>
+                <div class="efficiency-stats">
+                    <div class="efficiency-stat">
+                        <span class="big-number">4×</span>
+                        <span class="stat-desc">Faster Processing</span>
+                    </div>
+
+                    <div class="efficiency-stat">
+                        <span class="big-number">5.4%</span>
+                        <span class="stat-desc">Accuracy Boost</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dataset Section -->
+    <section id="dataset" class="section dataset-section">
+        <div class="container">
+            <h2>Dataset</h2>
+            <div class="dataset-content">
+                <div class="dataset-info">
+                    <h3>Line-Level OCR Dataset</h3>
+                    <p>We contribute a meticulously curated dataset of <strong>251 English pages</strong> with line-level annotations. This dataset fills a crucial gap in the literature as no public dataset existed for training and benchmarking line-level OCR systems.</p>
+                    
+                    <div class="dataset-features">
+                        <div class="feature">
+                            <i class="fas fa-image"></i>
+                            <span>251 English document pages</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-tags"></i>
+                            <span>Line-level annotations</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-eye"></i>
+                            <span>Diverse document types</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-download"></i>
+                            <span>Publicly available</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-download"></i> Download Dataset
+                    </a>
+                </div>
+                
+                <div class="dataset-samples">
+                    <h4>Sample Images from Dataset</h4>
+                    <div class="sample-grid">
+                        <div class="sample-image">
+                            <img src="images/sample1.jpg" alt="Dataset Sample 1: Document page with text">
+                            <p class="sample-caption">Sample 1</p>
+                        </div>
+                        <div class="sample-image">
+                            <img src="images/sample2.jpg" alt="Dataset Sample 2: Document with complex formatting">
+                            <p class="sample-caption">Sample 2</p>
+                        </div>
+                        <div class="sample-image">
+                            <img src="images/sample3.jpg" alt="Dataset Sample 3: Multi-column document">
+                            <p class="sample-caption">Sample 3</p>
+                        </div>
+                        <div class="sample-image">
+                            <img src="images/document_example.jpg" alt="Document Example: Full page OCR">
+                            <p class="sample-caption">Sample 4</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BibTeX Section -->
+    <section id="bibtex" class="section bibtex-section">
+        <div class="container">
+            <h2>Citation</h2>
+            <div class="bibtex-container">
+                <pre class="bibtex-code"><code>@article{vempati_anand2025lineocr,
+  title={Why Stop at Words? Unveiling the Bigger Picture through Line-Level OCR},
+  author={Vempati, Shashank and Anand, Nishit and Talebailkar, Gaurav and Garai, Arpan and Arora, Chetan},
+  journal={arXiv preprint},
+  year={2025},
+  institution={Indian Institute of Technology Delhi}
+}</code></pre>
+                <button class="copy-btn" onclick="copyBibtex()">
+                    <i class="fas fa-copy"></i> Copy Citation
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Indian Institute of Technology Delhi. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Paper</a>
+                    <a href="#">Code</a>
+                    <a href="#">Dataset</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

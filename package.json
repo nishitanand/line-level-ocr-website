@@ -1,0 +1,20 @@
+{
+  "name": "line-level-ocr-website",
+  "version": "1.0.0",
+  "description": "Website for Line-Level OCR Research Paper",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "serve": "python3 serve.py",
+    "dev": "python3 -m http.server 3000",
+    "open": "open http://localhost:8000"
+  },
+  "keywords": [
+    "ocr",
+    "research",
+    "computer-vision",
+    "line-level-ocr"
+  ],
+  "author": "Vempati and Anand",
+  "license": "Academic"
+} 
